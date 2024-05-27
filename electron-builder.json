@@ -1,0 +1,18 @@
+{
+  "productName": "no-sleep",
+  "appId": "com.example.yourapp",
+  "win": {
+    "target": "nsis"
+  },
+  "nsis": {
+    "oneClick": false,
+    "allowToChangeInstallationDirectory": true,
+    "artifactName": "${productName}-${version}.${ext}"
+  },
+  "publish": [
+    {
+      "provider": "generic",
+      "url": "http://106.14.196.158:666"
+    }
+  ]
+}
