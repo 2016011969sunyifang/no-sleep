@@ -4,6 +4,11 @@
   "win": {
     "target": "nsis"
   },
+  "mac": {
+    "target": ["dmg", "zip"],
+    "icon": "asset/no-sleep.png",
+    "identity": null
+  },
   "nsis": {
     "oneClick": false,
     "allowToChangeInstallationDirectory": true,
