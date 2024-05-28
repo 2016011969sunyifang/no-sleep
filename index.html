@@ -27,23 +27,23 @@
 
     document.getElementById("toggleImage").src = images[currentImageIndex];
 
-    document
-      .getElementById("toggleImage")
-      .addEventListener("click", function () {
-        currentImageIndex = 1 - currentImageIndex; // 切换图片的状态
-        this.src = images[currentImageIndex]; // 更新图片的 src 属性
-      });
-    document
-      .getElementById("toggleImage")
-      .addEventListener("mousedown", function (event) {
-        ipcRenderer.send("drag-start", { x: event.screenX, y: event.screenY });
-      });
+    // document
+    //   .getElementById("toggleImage")
+    //   .addEventListener("click", function () {
+    //     currentImageIndex = 1 - currentImageIndex; // 切换图片的状态
+    //     this.src = images[currentImageIndex]; // 更新图片的 src 属性
+    //   });
+    // document
+    //   .getElementById("toggleImage")
+    //   .addEventListener("mousedown", function (event) {
+    //     ipcRenderer.send("drag-start", { x: event.screenX, y: event.screenY });
+    //   });
 
-    document
-      .getElementById("toggleImage")
-      .addEventListener("mouseup", function (event) {
-        ipcRenderer.send("drag-end", { x: event.screenX, y: event.screenY });
-      });
+    // document
+    //   .getElementById("toggleImage")
+    //   .addEventListener("mouseup", function (event) {
+    //     ipcRenderer.send("drag-end", { x: event.screenX, y: event.screenY });
+    //   });
   </script>
   <script src="./renderer.js"></script>
 </html>

@@ -62,10 +62,10 @@ app.whenReady().then(() => {
   });
 
   //拖拽
-  ipcMain.on("drag-start", (event, position) => {
-    log.info("drag-start", position);
-    win.setBounds({ x: position.x, y: position.y });
-  });
+  // ipcMain.on("drag-start", (event, position) => {
+  //   log.info("drag-start", position);
+  //   win.setBounds({ x: position.x, y: position.y });
+  // });
 });
 
 app.on("window-all-closed", () => {
@@ -78,7 +78,6 @@ let id = null;
 app.on("ready", () => {
   id = powerSaveBlocker.start("prevent-display-sleep");
   log.info("notSleep!", "记住id：", id);
-  console.log(powerSaveBlocker.isStarted(id));
 });
 
 app.on("will-quit", () => {
